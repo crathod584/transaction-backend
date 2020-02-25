@@ -9,7 +9,7 @@ exports.addTransaction = (req, res) => {
 
 
 exports.getTransaction = (req, res) => {   
-   TransactionModel.allTransaction(limit).then((result) => {
+   TransactionModel.allTransaction().then((result) => {
        res.status(200).send(result);
    })
 };

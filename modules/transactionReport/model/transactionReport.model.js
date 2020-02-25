@@ -16,7 +16,7 @@ exports.createTransaction = (data) => {
     return transaction.save();
 };
 
-exports.allTransaction = (perPage, page) => {
+exports.allTransaction = () => {
     return new Promise((resolve, reject) => {
         Transactions.find()
             .exec(function (err, users) {
