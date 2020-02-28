@@ -19,6 +19,7 @@ exports.createTransaction = (data) => {
 exports.allTransaction = () => {
     return new Promise((resolve, reject) => {
         Transactions.find()
+            .sort('-date')
             .exec(function (err, users) {
                 if (err) {
                     reject(err);
